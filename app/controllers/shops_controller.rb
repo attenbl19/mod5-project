@@ -4,16 +4,32 @@ class ShopsController < ApplicationController
         render json: @shops
     end
 
-    def create
-        @shop = @pet.shop.create(shop_params) 
+    def new
+        @shop = Shop.new
         render json: @shop
     end
 
 
-    def shop_params
-        params.permit(:pet_type_id, :name, :address, :location, :image )
+    def create
+        @shop = Shop.create(shop_params)
+        render json: @shop
+    end
+
+    
+    def destroy 
+        @shop = Shop.find(params[:id])
+        @shop.destroy
+        render json: Shop.all
     end
 
 
+    private
+
+    def shop_params
+        params.permit(:name, :address, :location, :hours, :image)
+    end
+
+
+   
    
 end
