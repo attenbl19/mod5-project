@@ -4,8 +4,8 @@ class ShopsController < ApplicationController
         render json: @shops
     end
 
-    def new
-        @shop = Shop.new
+    def show
+        @shop = Shop.find(params[:id])
         render json: @shop
     end
 

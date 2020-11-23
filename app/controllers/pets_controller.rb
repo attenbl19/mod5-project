@@ -38,25 +38,26 @@ class PetsController < ApplicationController
     
 # end
 
-def new
-    @pet = Pet.new
-    @shops = Shop.all
-    @pet_types = PetType.all
-end 
+# def new
+#     @pet = Pet.new
+#     @shops = Shop.all
+#     @pet_types = PetType.all
+# end 
 
-def create
-    pet_params = params.require(:pet).permit(:name, :species, :age, :pet_type_id, :shop_id)
-    @pet = Pet.create(pet_params)
+# def create
+#     pet_params = params.require(:pet).permit(:name, :species, :age, :pet_type_id, :shop_id)
+#     @pet = Pet.create(pet_params)
 
-    shop = Shop.find(params[:pet][:shop_id])
+#     shop = Shop.find(params[:pet][:shop_id])
 
-    or
+#     or
 
-    pet = Pet.create(pet_params)
+#     pet = Pet.create(pet_params)
 
-    def pet_params
-        params.permit(:name, :species, :age, :pet_type_id, :shop_id)
+#     def pet_params
+#         params.permit(:name, :species, :age, :pet_type_id, :shop_id)
 
     
-end
+# end
+# how to create the association that shows a pet that is assoicated with a specific shop ?
 

@@ -1,4 +1,5 @@
 class PetType < ApplicationRecord
-    has_many :pets
-    has_many :shops through: :pets
+    belongs_to :shop
+    # has_many :pets
+    # has_many :shops through: :pets
 end

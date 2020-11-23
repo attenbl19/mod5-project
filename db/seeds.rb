@@ -158,20 +158,29 @@ end
 
 pt_array = 
 [
-    {name_type: "Birds",
-    icon: ""
+    {
+        name_type: "Bird",
+        icon: "https://img.icons8.com/dotty/80/000000/bird.png"
     },
 
-    {name_type: "Cats"
-    icon: ""
+    {
+        name_type: "Cat",
+        icon: "https://img.icons8.com/wired/64/000000/cat.png"
     },
 
-    {name_type: "Dogs"
-    icon: ""
+    {
+        name_type: "Dog",
+        icon: "https://img.icons8.com/wired/64/000000/dog.png"
     },
 
-    {name_type: "Small Mammals"
-    icon: ""
+    {
+        name_type: "Small Mammal",
+        icon: "https://img.icons8.com/dotty/80/000000/hamster-wheel.png"
+    },
+
+    {
+        name: "Other",
+        icon: "https://img.icons8.com/ios/50/000000/rabbit.png"
     }
 
 ]
